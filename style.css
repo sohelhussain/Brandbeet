@@ -26,6 +26,9 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0% 3vw;
+  position: fixed;
+  z-index: 99;
+  mix-blend-mode: difference;
 }
 .left-part {
   width: fit-content;
@@ -36,6 +39,7 @@ nav {
   text-transform: capitalize;
   font-weight: 400;
   letter-spacing: 0.1;
+  color: white;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
 .left-part:hover h1 {
@@ -50,6 +54,7 @@ nav {
   font-size: 1vw;
   font-weight: 400;
   letter-spacing: 0.1px;
+  color: white;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
 .right-part:hover h2 {
@@ -59,19 +64,74 @@ nav {
   height: 100vh;
   width: 100%;
   position: relative;
-  /* background-color: black; */
+  background-color: black;
 }
-.containt-part1{
-    width: 100%;
-    height: 100vh;
+.containt-part1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
 }
-.rotate-div{
-    width: 200%;
-    height: 200vh;
-    background-color: black;
+.rotate-div {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 3vw;
+  width: 200%;
+  height: 200%;
+  margin-left: -30%;
 }
-.row-div{
-    width: calc(100%/5);
-    height: 100%;
-    background-color: white;
+.row-div {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  align-items: center;
+  justify-content: center;
+  width: calc(200vw / 5);
+  height: 100%;
+}
+.row-div:nth-child(1) {
+  margin-top: -5%;
+}
+.row-div:nth-child(2) {
+  margin-top: -10%;
+}
+.row-div:nth-child(3) {
+  margin-top: -15%;
+}
+.row-div:nth-child(4) {
+  margin-top: -20%;
+}
+.img-div {
+  width: 100%;
+  height: calc(100% / 4);
+  background-color: gray;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.img-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlaye {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.containt-part1 h1 {
+  font-size: 10vw;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  color: white;
+  z-index: 9;
+  opacity: 0;
 }

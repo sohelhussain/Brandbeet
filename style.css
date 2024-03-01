@@ -216,16 +216,40 @@ nav {
   font-weight: 100;
   color: #b0b0b0;
 }
-.btn-conut button {
-  padding: 15px 25px;
+.btn-right{
+  display: flex;
+}
+.btn-conut{
+  display: flex;
+  /* flex-direction: column; */
+}
+.btn-conut .btn {
+  /* padding: 15px 25px; */
+  width: 170px;
+  height: 50px;
   margin-left: 30px;
   border-radius: 25px;
   border: none;
   background-color: #e0e0e1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  overflow: hidden;
 }
-.btn-conut button:nth-child(1) {
+.btn-conut .btn h4{
+  font-size: 1.2vw;
+  transform: translateY(80%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1).5s;
+}
+.btn-conut .btn:nth-child(1) {
   background-color: black;
   color: white;
+}
+.btn-conut .btn:hover h4{
+  transform: translateY(-80%);
 }
 .logo-nav {
   width: 100%;

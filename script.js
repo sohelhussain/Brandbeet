@@ -120,3 +120,24 @@ Shery.makeMagnet(".btn-conut .btn",{
   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
   duration: 1,
 })
+const thirdAnimation = gsap.timeline({
+  scrollTrigger:{
+    trigger:"#container-third",
+    scroller: "body",
+    // markers: true,
+    start:"5% 0%",
+    end:"500% 10%",
+    pin: true,
+    scrub: 1
+  }
+})
+thirdAnimation.to(".text-box-right",{
+  top: "-230%"
+},"svg")
+thirdAnimation.to(".rotating-symbol",{
+  rotate: "360"
+},"svg")
+thirdAnimation.to(".rotating-symbol",{
+  rotate: "720",
+  x:"700",
+})

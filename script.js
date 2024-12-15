@@ -20,6 +20,9 @@ const splitText = (element) => {
   });
   text.innerHTML = clutter;
 };
+
+
+
 const firstAnimation = () => {
   const swip = gsap.timeline({
     scrollTrigger: {
@@ -141,3 +144,91 @@ thirdAnimation.to(".rotating-symbol",{
   rotate: "720",
   x:"700",
 })
+
+
+
+// ! page3
+
+
+gsap.to(".over2",{
+  width:0,
+  stagger:0.2,
+  duration:2.5,
+  scrollTrigger:{
+      trigger:"#page3",
+      scroller:"body",
+      start:"top 40%",
+      end:"top -40%",
+      scrub:1,
+  }
+})
+
+gsap.to("#round2",{
+  height:0,
+  duration:1.5,
+  scrollTrigger:{
+      trigger:"#round2",
+      scroller:"body",
+      start:"top 50%",
+      end:"top 0%",
+      scrub:true,
+  }
+})
+
+gsap.to(".over3",{
+  width:0,
+  stagger:0.2,
+  duration:2.5,
+  scrollTrigger:{
+      trigger:"#page4",
+      scroller:"body",
+      start:"top 50%",
+      end:"top -50%",
+      scrub:1,
+  }
+})
+
+
+function page5(){
+var tl3 = gsap.timeline({
+  scrollTrigger:{
+      trigger:"#page5",
+      scroller:"body",
+      start:"top 0%",
+      end:"top -500%",
+      scrub:true,
+      pin:true
+  }
+})
+
+tl3
+.to(".cover1",{
+  top:"-50%",
+  delay:.5,
+  duration:1,
+  duration:1,
+},"a")
+.to(".cover2",{
+  bottom:"-50%",
+  delay:.5,
+  duration:1,
+  duration:1,
+},"a")
+.to("#center-txt #span1",{
+  x:-300,
+  y:-230,
+  duration:1,
+  delay:.5
+},"a")
+.to("#center-txt #span2",{
+  x:350,
+  y:210,
+  duration:1,
+  delay:.5
+},"a")
+.to("#img-container img",{
+  transform: "translateY(-700%)",
+  duration:3
+})
+}
+page5()
